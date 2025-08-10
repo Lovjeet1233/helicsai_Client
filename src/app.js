@@ -1,12 +1,13 @@
-import React from 'react'
-import SecureAIPlatformJSX from './components/SecureAIPlatform.jsx'
+import React from 'react';
+import { AuthProvider } from './components/AuthProvider';
+import SecureAIPlatform from './components/SecureAIPlatform';
 
 function App() {
   return (
-    <div className="App">
-      <SecureAIPlatformJSX/>
-    </div>
-  )
+    <AuthProvider>
+      <SecureAIPlatform />
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;
